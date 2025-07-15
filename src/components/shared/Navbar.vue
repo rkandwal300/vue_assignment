@@ -6,6 +6,16 @@ const isGlass = ref(false);
 
 const handleScroll = () => {
     isGlass.value = window.scrollY > window.innerHeight * 0.7;
+
+    // Also toggle a class on the main tag
+    const mainEl = document.getElementById('main');
+    if (mainEl) {
+        if (isGlass.value) {
+            mainEl.classList.add('glass-active');
+        } else {
+            mainEl.classList.remove('glass-active');
+        }
+    }
 };
 
 onMounted(() => {
@@ -19,10 +29,10 @@ onUnmounted(() => {
 
 <template>
     <div :class="[
-        'w-full h-13 fixed top-17 z-20 px-10 flex justify-center items-center transition duration-300',
-        isGlass
-            ? 'backdrop-blur-md bg-primary/60 shadow-md text-secondary-foreground'
-            : 'bg-primary text-secondary'
+        'w-full h-13 fixed top-17 bg-[#0E77FF] text-secondary z-20 px-10 flex justify-center items-center transition duration-300',
+        // isGlass
+        //     ? 'backdrop-blur-md bg-primary/60 shadow-md text-secondary-foreground'
+        //     : 'bg-primary text-secondary'
     ]">
         <nav class="flex justify-between w-full items-center gap-10 mx-auto max-w-5xl">
             <span class="text-2xl">Logo</span>

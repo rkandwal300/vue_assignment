@@ -1,15 +1,12 @@
 <script setup>
-import { ref } from 'vue';
 import Navbar from './components/shared/Navbar.vue';
-import HeroSection from './components/shared/heroSection.vue';
-import About from './components/shared/About.vue';
-import CoreTechnologies from './components/shared/CoreTechnologies.vue';
+import Portfolio from './pages/Portfolio.vue';
 
 </script>
 
 <template>
-  <Navbar />
-  <HeroSection  />
-  <About />
-  <CoreTechnologies />
+  <main class="h-screen overflow-auto">
+    <Navbar />
+    <Portfolio />
+  </main>
 </template>

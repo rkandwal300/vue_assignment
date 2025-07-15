@@ -1,42 +1,59 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
+import react from '@/assets/react.svg'
+import aws from '@/assets/aws.svg'
+import cloud from '@/assets/cloud.svg'
+import vue from '@/assets/vue.svg'
+import js from '@/assets/js.svg'
+import symfony from '@/assets/symfony.svg'
+import redux from '@/assets/redux.svg'
+import node from '@/assets/node.svg'
+import firebase from '@/assets/firebase.svg'
+
+
+
 const tabs = ['Design', 'Development', 'Marketing']
 const activeTab = ref('Development')
 
 
 const techIcons = {
     Design: [
-        'react.svg',
-        'aws.svg',
-        'cloud.svg',
-        'vue.svg',
-        'js.svg',
+        react,
+        aws,
+        cloud,
+        vue,
+        js,
     ],
     Development: [
-        'react.svg',
-        'aws.svg',
-        'cloud.svg',
-        'js.svg',
-        'symfony.svg',
-        'redux.svg',
-        'node.svg',
-        'firebase.svg',
+        react,
+        aws,
+        cloud,
+        js,
+        symfony,
+        redux,
+        node,
+        firebase,
     ],
     Marketing: [
-        'js.svg',
-        'symfony.svg',
-        'redux.svg',
-        'node.svg',
-        'firebase.svg',
+        cloud,
+        js,
+        symfony,
+        redux,
+        node,
+        firebase,
     ]
+}
+
+const getIconPath = (icon) => {
+    return new URL(`@/assets/${icon}`, import.meta.url).href
 }
 </script>
 
 <template>
-    <section class="relative px-4 py-20 bg-[#f7faff] text-center overflow-hidden">
-        <div class="flex items-center justify-center relative overflow-hidden pt-20">
+    <section class="relative px-4 py-20 bg-[#f7faff] text-center">
+        <div class=" absolute overflow-hidden w-70 -top-20 -left-14">
             <img src="@/assets/CoreLeftTop.svg" alt="About Visual"
-                class="w-full md:w-[120%] transform transition duration-500 md:scale-[1.4] md:-translate-x-[300px] translate-y-4 -translate-x-[250px]" />
+                class="w-full md:w-[120%] transform transition duration-500 " />
         </div>
 
 
@@ -59,15 +76,11 @@ const techIcons = {
         </div>
 
         <!-- Icons Grid -->
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center max-w-5xl mx-auto">
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center px-10 mx-auto max-w-2xl">
             <div v-for="icon in techIcons[activeTab]" :key="icon"
                 class="w-20 h-20 flex items-center justify-center border border-blue-100 rounded-lg shadow-sm hover:scale-105 transition">
-                <img :src="`@/assets/${icon}`" :alt="icon" class="w-10 h-10 object-contain" />
+                <img :src="icon" :alt="icon" class="w-10 h-10 object-contain" />
             </div>
         </div>
     </section>
 </template>
-
-<style scoped>
-/* Optional: triangle backgrounds if you want absolute decorations */
-</style>
