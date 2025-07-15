@@ -1,12 +1,11 @@
 <script setup>
-import Navbar from './components/shared/Navbar.vue';
-import Portfolio from './pages/Portfolio.vue';
+import Navbar from './components/shared/Navbar.vue'; 
 
 </script>
 
 <template>
   <main class="h-screen overflow-auto">
-    <Navbar />
-    <Portfolio />
+  <Navbar />
+    <router-view />
   </main>
 </template>
