@@ -80,7 +80,7 @@ const handleToggleMenu = () => {
       </Button>
 
       <div class="flex flex-col gap-4">
-        <Button variant="ghost" class="text-background cursor-pointer" @click="handleToggleMenu">
+        <Button variant="ghost" class="md:hidden text-background cursor-pointer" @click="handleToggleMenu">
           <Logs class="w-5 h-5" />
         </Button>
 

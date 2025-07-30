@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
@@ -118,7 +119,17 @@
   * {
     @apply p-0 m-0 overflow-hidden;
   }
- body {
-  font-family: 'Poppins', 'Open Sans', 'Quicksand', sans-serif;
-}
+
+  body {
+    font-family: 'Poppins', 'Open Sans', 'Quicksand', sans-serif;
+  }
+
+  .gradient_hero {
+    @apply bg-gradient-to-b from-foreground/5 via-background to-background bg-clip-text text-transparent;
+  }
+ 
+
+  .text-comment-grey {
+    @apply text-[#7A7A7A];
+  }
 }

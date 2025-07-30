@@ -8,11 +8,14 @@ import Service from '@/components/shared/Service.vue';
 
 </script>
 
-<template>
-    <HeroSection />
-    <About />
+<template> <div class="w-full`">
+    
+        <HeroSection />
+  
+    <!-- <About />
     <Service />
     <CoreTechnologies />
     <ContactForm />
-    <FooterSection />
+    <FooterSection /> -->
+</div>
 </template>

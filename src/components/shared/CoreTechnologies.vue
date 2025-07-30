@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import react from '@/assets/react.svg'
 import aws from '@/assets/aws.svg'
 import cloud from '@/assets/cloud.svg'
-import vue from '@/assets/vue.svg'
+// import vue from '@/assets/vue.svg'
 import js from '@/assets/js.svg'
 import symfony from '@/assets/symfony.svg'
 import redux from '@/assets/redux.svg'
@@ -21,7 +21,7 @@ const techIcons = {
         react,
         aws,
         cloud,
-        vue,
+        // vue,
         js,
     ],
     Development: [
